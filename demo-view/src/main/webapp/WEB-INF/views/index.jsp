@@ -1,18 +1,26 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>  
+
+<spring:url var="css" value="/resources/css"/>
+<spring:url var="js" value="/resources/js"/>
+<spring:url var="images" value="/resources/images"/>
+
+
 <html>
     <head>
-        <link href="css/sm/semantic.min.css" rel="stylesheet" type="text/css">
-        <script src="js/sm/jquery.min.js"></script>
-        <script src="js/sm//semantic.min.js"></script>
+        <link href="${css}/sm/semantic.min.css" rel="stylesheet" type="text/css">
+        <script src="${js}/sm/jquery.min.js"></script>
+        <script src="${js}/sm/semantic.min.js"></script>
     </head>
     <body>
 
         <!--header menu--> 
         <div class="ui attached stackable menu">
             <div class="ui container">
-                <a class="item" href="jsp/template1.jsp">
+                <a class="item" href="${pageContext.request.contextPath}/template1.jsp">
                     <i class="home icon"></i> Home
                 </a>
-                <a class="item" href="jsp/temp_boot1.jsp">
+                <a class="item" href="temp_boot1.jsp">
                     <i class="grid layout icon"></i> Browse
                 </a>
                 <a class="item">
